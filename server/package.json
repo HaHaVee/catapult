@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec ts-node index",
+    "db:migrate": "ts-node ./node_modules/typeorm/cli.js migration:run",
+    "db:generate-sample-data": "ts-node ./scripts/add-sample-data.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7",
+    "pg": "^8.5.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^9.1.1",
+    "typeorm": "^0.2.31",
+    "typescript": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.31"
+  }
+}

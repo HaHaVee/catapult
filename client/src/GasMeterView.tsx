@@ -1,7 +1,7 @@
 import { ResponsiveBar } from "@nivo/bar";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { GasMeter } from "./App";
+import { GasMeter } from "./AuthenticatedApp";
 
 interface Props {
   existingGasMeters: GasMeter[] | undefined;
@@ -15,6 +15,8 @@ export const GasMeterView: React.FC<Props> = ({ existingGasMeters }) => {
   /* fetch initial reading data */
   useEffect(() => {
     fetchData();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // find selected gas meter
@@ -27,6 +29,8 @@ export const GasMeterView: React.FC<Props> = ({ existingGasMeters }) => {
       (meter) => meter.id === params.gasMeterId
     );
     setGasMeter(gasMeter);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [existingGasMeters]);
 
   const fetchData = async () => {

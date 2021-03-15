@@ -1,7 +1,7 @@
 import { ResponsiveBar } from "@nivo/bar";
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { GasMeter } from "./App";
+import { GasMeter } from "./AuthenticatedApp";
 import "./dashboardView.css";
 
 interface Props {
